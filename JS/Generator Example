@@ -1,0 +1,25 @@
+/*
+ * This is a JavaScript Scratchpad.
+ *
+ * Enter some JavaScript, then Right Click or choose from the Execute Menu:
+ * 1. Run to evaluate the selected text (Ctrl+R),
+ * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
+ * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
+ */
+
+//for Generator and their use
+
+function* makeRangeGenerator(start=0,end=100,step=1){
+  for(let i=start;i<end;i+=step){
+    yield i;
+  }
+}
+
+let it=makeRangeGenerator(1,20,2);
+while(it.next!=undefined){
+  console.log(it.next);
+}
+/*
+Exception: SyntaxError: expected expression, got '='
+@Scratchpad/2:14
+*/
