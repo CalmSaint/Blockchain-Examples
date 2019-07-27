@@ -16,11 +16,11 @@ public class WinTheGame {
 				double green=Double.valueOf(input[1]);
 				if(green==0 && red==0) {
 					System.out.println("1.000000");
-					return;
+					continue;
 				}
 				if(red==0) {
 					System.out.println("1.000000");
-					return;
+					continue;
 				}
 				System.out.println(nFormat.format(winProb(red,green)));
 			}
